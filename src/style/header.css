@@ -1,0 +1,12 @@
+.header {
+    background-color: white;
+    min-height: 68px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  link a {
+    color: #FF6060;
+  }
