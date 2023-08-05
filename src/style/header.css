@@ -11,6 +11,7 @@
     color: #FF6060;
     text-decoration: none;
     margin-left: 60px;
+    font-size: 24px;
   }
 
 /* Style du lien actif */
@@ -18,4 +19,26 @@
     text-decoration: underline;
   }
   
- 
+
+  .header .logo {
+    height: 60px;
+    pointer-events: none;
+  }
+  
+  
+  
+   /* -------------- mobile -----------------*/
+  
+   @media (max-width: 600px) {
+   .header .logo {
+      height: 45px;
+    }
+    .header a{
+        font-size: 16px;
+        margin-left: 40px;
+    }
+  }
+  
+  
+  
+  

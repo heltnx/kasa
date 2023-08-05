@@ -9,7 +9,6 @@ import Landing404 from './pages/Landing404.jsx';
 import Header from './layout/Header.jsx';
 import Footer from './layout/Footer';
 /*css*/
-import './style/App.css';
 
 function App() {
   return (
