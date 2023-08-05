@@ -7,6 +7,15 @@
     justify-content: space-between;
   }
   
-  link a {
+  .header a {
     color: #FF6060;
+    text-decoration: none;
+    margin-left: 60px;
   }
+
+/* Style du lien actif */
+.nav-link.active {
+    text-decoration: underline;
+  }
+  
+ 
