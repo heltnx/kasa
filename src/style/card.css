@@ -1,0 +1,10 @@
+
+.card-contain {
+    /* Ajoutez ici les styles pour le carré de logement */
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 10px;
+    padding: 10px;
+    cursor: pointer;
+  }
