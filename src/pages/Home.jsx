@@ -11,7 +11,9 @@ const Home = () => {
       <Banniere backgroundImage='/images/Image%20source%201.jpg'>
         <h1>Chez vous, partout et ailleurs</h1>
       </Banniere>
-      
+      <div className='item-contain'>
+
+      </div>
     </div>
   );
 };
