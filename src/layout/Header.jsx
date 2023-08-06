@@ -1,6 +1,9 @@
 import React from 'react';
-import '../style/header.css';
+// components
 import Nav from '../components/Nav';
+// css
+import '../style/header.css';
+
 
 const Header = () => {
   return (
