@@ -1,10 +1,37 @@
+/* Card css */ 
+
+.item-contain {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  grid-gap: 50px; 
+}
 
 .card-contain {
-    /* Ajoutez ici les styles pour le carré de logement */
-    width: 100px;
-    height: 100px;
-    background-color: lightblue;
-    margin: 10px;
-    padding: 10px;
-    cursor: pointer;
-  }
+  position: relative;
+  width: 340px;
+  height: 340px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+  overflow: hidden; /* Ajout de cette propriété pour masquer le débordement de l'image */
+}
+
+.card-contain img {
+  width: 100%; /* Pour que l'image occupe toute la largeur du conteneur */
+  height: 60%; /* Vous pouvez ajuster la hauteur selon vos besoins */
+  object-fit: cover; /* Pour maintenir le rapport hauteur/largeur et remplir le conteneur */
+  border-radius: 10px; /* Utilisation du même border-radius que le conteneur */
+}
+
+.card-contain::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 10px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+}

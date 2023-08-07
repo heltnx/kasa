@@ -1,10 +1,12 @@
 // Home.js
-
 import React from 'react';
+
+// components
 import Banniere from '../components/Banniere';
+import Card from '../components/Card';
+// css
 import '../style/home.css'
 import '../style/banniere.css';
-import Card from '../components/Card';
 
 
 const Home = () => {
