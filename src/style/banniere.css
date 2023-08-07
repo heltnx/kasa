@@ -3,7 +3,7 @@
 .banniere {
   position: relative;
     height: 225px;
-    background-position-y: bottom 40%;
+    background-position: center bottom 40%;
     background-size: cover; /* Assurez-vous que l'image couvre tout le fond */
     border-radius: 25px;
     display: flex;
