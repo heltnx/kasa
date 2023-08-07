@@ -28,8 +28,8 @@ const Card = () => {
       {logements.map((logement) => (
         // Utiliser la propriété "key" pour chaque élément
         <div key={logement.id} onClick={() => handleLogementClick(logement.id)} className="card-contain">
-          <h2>{logement.title}</h2>
           <img src={logement.cover} alt={logement.title} />
+          <h2>{logement.title}</h2>
         </div>
       ))}
     </div>

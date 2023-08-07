@@ -15,3 +15,11 @@ code {
   width: 90%;
   margin: 40px auto;
 }
+
+/* -------------- mobile -----------------*/
+@media (max-width: 1283px) {
+  .container{
+    width: 95%;
+    margin:20px auto;
+  }
+}

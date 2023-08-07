@@ -24,4 +24,11 @@
   background-color: black;
   opacity: 0.3; /* Opacité du filtre */
 }
-  
+
+
+ /* -------------- mobile -----------------*/ 
+@media (max-width: 478px) {
+  .banniere {
+  height: 111px;
+  }
+}

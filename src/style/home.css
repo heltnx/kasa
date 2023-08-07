@@ -8,12 +8,25 @@ h1 {
     z-index: 2;
 }
 
-.item-contain {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
-    grid-gap: 50px;
-    background-color: #F6F6F6;
-    border-radius: 25px;
-    margin-top: 50px;
-    padding: 25px;
-}
+
+/* -------------- mobile -----------------*/
+@media (max-width: 911px) {
+    h1{
+      font-size: 2rem;
+    }
+  }
+  
+  @media (max-width: 611px) {
+    h1{
+      line-height: normal;
+      width: 300px;
+    }
+  }
+  @media (max-width: 478px) {
+    h1{
+        font-size: 1.5rem;
+        width: 220px;
+        align-self: flex-start;
+        margin-left: 40px;
+      }
+    }
