@@ -2,17 +2,17 @@
 
 .banniere {
   position: relative;
-    height: 225px;
-    background-position: center;
-    background-size: cover; 
-    border-radius: 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  
-   /* Style pour le filtre noir */
+  height: 225px;
+  background-position: center;
+  background-size: cover;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style pour le filtre noir */
 .banniere::before {
   content: '';
   border-radius: 25px;
@@ -22,14 +22,25 @@
   width: 100%;
   height: 100%;
   background-color: black;
-  opacity: 0.3; 
+  opacity: 0.3;
 }
 
 
- /* -------------- mobile -----------------*/ 
+/* -------------- mobile -----------------*/
+@media (max-width: 1100px) {
+
+  .banniere,
+  .banniere::before {
+    height: 160px;
+    border-radius: 10px
+  }
+}
+
 @media (max-width: 478px) {
-  .banniere {
-  height: 111px;
-  border-radius: 15px
+
+  .banniere,
+  .banniere::before {
+    height: 111px;
+    border-radius: 10px
   }
 }
