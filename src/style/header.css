@@ -15,10 +15,13 @@
   }
 
 /* Style du lien actif */
+.header{
+  padding: 0 5px;
+}
+
 .nav-link.active {
     text-decoration: underline;
   }
-  
 
   .header .logo {
     height: 60px;
@@ -30,12 +33,13 @@
    /* -------------- mobile -----------------*/
   
    @media (max-width: 600px) {
+   
    .header .logo {
-      height: 45px;
+      height: 40px;
     }
     .header a{
-        font-size: 16px;
-        margin-left: 40px;
+        font-size: 15px;
+        margin-left: 30px;
     }
   }
   

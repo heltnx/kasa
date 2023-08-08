@@ -69,7 +69,7 @@ h2 {
 
 @media (max-width: 478px) {
   .card-contain {
-    min-width: 325px;
+    min-width: 320px;
     width: 100%;
     margin-top: 0;
   }

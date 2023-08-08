@@ -1,11 +1,12 @@
 // api.js
 
-export const fetchLogementsData = () => {
-    return fetch('/logements.json')
-      .then((response) => response.json())
-      .catch((error) => {
-        console.error('Error fetching logements data:', error);
-        return []; // En cas d'erreur, renvoyer une liste vide ou gérer l'erreur comme souhaité
-      });
+export const fetchLogementsData = async () => {
+    try {
+    const response = await fetch('/logements.json');
+    return await response.json();
+  } catch (error) {
+    alert('Error fetching logements data:', error);
+    return [];
+  }
   };
   
