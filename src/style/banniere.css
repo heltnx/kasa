@@ -44,3 +44,12 @@
     border-radius: 10px
   }
 }
+
+/* -------------- mobile -----------------*/
+@media (max-width: 675px) {
+
+  .about .banniere,
+  .about .banniere::before {
+    height: 223px;
+  }
+}
