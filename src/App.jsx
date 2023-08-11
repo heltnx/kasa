@@ -18,9 +18,10 @@ function App() {
         <div className='container'>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/About" element={<About />} />
-            <Route path="/Logement/:id" element={<Logement />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/logement/:id" element={<Logement />} />
             <Route path="*" element={<Landing404 />} />
+            <Route path="/landing404" element={<Landing404 />} />
           </Routes>
         </div>
         <Footer />

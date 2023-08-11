@@ -1,8 +1,7 @@
 // Card.jsx
 import React, { useState, useEffect } from 'react';
-
 // fonction import elements
-import { fetchLogementsData } from './api'; 
+import { fetchLogementsData } from './api';
 // css
 import '../style/card.css';
 
@@ -29,7 +28,7 @@ const Card = () => {
         // Utiliser la propriété "key" pour chaque élément
         <div key={logement.id} onClick={() => handleLogementClick(logement.id)} className="card-contain">
           <img src={logement.cover} alt={logement.title} />
-          <h2>{logement.title }</h2>
+          <h2>{logement.title}</h2>
         </div>
       ))}
     </div>

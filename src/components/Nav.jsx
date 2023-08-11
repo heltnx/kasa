@@ -20,7 +20,7 @@ const Nav = () => {
         Accueil
       </NavLink>
       <NavLink
-        to="/About"
+        to="/about"
         onClick={() => handleLinkClick('about')}
         className={activeLink === 'about' ? 'nav-link active' : 'nav-link'}
       >
