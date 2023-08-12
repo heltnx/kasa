@@ -7,12 +7,10 @@ import '../style/header.css';
 
 const Header = () => {
   return (
-    <div className='container'>
-      <header className="header">
-        <img src="../images/logo.png" className="logo" alt="logo" />
-        <Nav />
-      </header>
-    </div>
+    <header className="header">
+      <img src="../images/logo.png" className="logo" alt="logo" />
+      <Nav />
+    </header>
   );
 };
 
