@@ -26,7 +26,7 @@ const Logement = () => {
 
   if (logement === null) {
     return (
-      <div></div> // chargement
+      <div>chargement en cours...</div>
     )
 
   }
