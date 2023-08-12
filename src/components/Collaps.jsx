@@ -8,9 +8,9 @@ const Collaps = ({ title, description }) => {
 
     return (
         <div className={`collaps-container ${isOpen ? 'open' : ''}`}>
-            <div className="collaps-header" onClick={toggleCollapse}>
+            <div className="collaps-header" >
                 <h3>{title}</h3>
-                <div className={`arrow ${isOpen ? 'open' : ''}`}>
+                <div className={`arrow ${isOpen ? 'open' : ''}`} onClick={toggleCollapse}>
                     <img src="/images/arrow.svg" alt="Arrow" className="arrow-icon" />
                 </div>
             </div>
