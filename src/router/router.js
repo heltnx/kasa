@@ -21,6 +21,8 @@ const Router = () => {
                     <Route path="/logement/:id" element={<Logement />} />
                     <Route path="*" element={<Landing404 />} />
                 </Routes>
+            </div>
+            <div className='full'>
                 <Footer />
             </div>
         </BrowserRouter>
