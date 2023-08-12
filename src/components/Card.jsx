@@ -1,7 +1,7 @@
 // Card.jsx
 import React, { useState, useEffect } from 'react';
 // fonction import elements
-import { fetchLogementsData } from './api';
+import { fetchLogementsData } from '../utils/api';
 // css
 import '../style/card.css';
 
