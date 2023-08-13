@@ -1,14 +1,7 @@
 .logement h1 {
     color: #FF6060;
     font-size: 3vw;
-    width: 60%;
-}
-
-.collaps-logement {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    width: 100%;
 }
 
 .logement p {
@@ -16,6 +9,14 @@
     font-size: 18px
 }
 
+.logement {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* tags */
 .logement .tags {
     display: flex;
     justify-content: baseline;
@@ -35,9 +36,34 @@
     text-align: center;
 }
 
-.collaps-logement .collaps-container {
-    width: 45%;
+/*  host  */
+.host-info {
+    display: flex;
+    flex-direction: row;
 }
+
+.host-picture {
+    border-radius: 50%;
+}
+
+.host-info p {
+    align-self: end;
+    margin-right: 15px;
+}
+
+/* collapses */
+.collaps-logement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.collaps-logement .collaps-container {
+    width: 48%;
+    margin: 0;
+}
+
 
 /* -------------- mobile -----------------*/
 

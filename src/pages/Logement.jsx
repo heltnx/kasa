@@ -55,13 +55,12 @@ const Logement = () => {
       <div className='user'>
         { /*------ hosts ------------------------*/}
         <div className='host-info'>
-          <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
           <p className="host-name">{logement.host.name}</p>
+          <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
         </div>
 
         { /*------ stars ------------------------*/}
         <div className='rating'>
-          <p className="rating-label">Évaluation :</p>
           <StarRating rating={logement.rating} />
         </div>
       </div>
