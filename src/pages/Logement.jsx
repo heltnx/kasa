@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchLogementData } from '../utils/api.js';
 // components
+import Carousel from '../components/carousel.jsx';
 import Collaps from '../components/Collaps';
 import StarRating from '../components/StarRating';
 // css
@@ -37,7 +38,10 @@ const Logement = () => {
   return (
     <div className='logement'>
 
-      { /*------ titre et location ------------------------*/}
+      { /* ----- Carousel ---------------------- */}
+      <Carousel images={logement.pictures} />
+
+      { /*------ titre et location ---------------*/}
       <div className='title'>
         <h1>{logement.title}</h1>
         <p>{logement.location}</p>
