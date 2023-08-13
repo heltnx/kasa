@@ -1,19 +1,27 @@
-.logement h1 {
-    color: #FF6060;
-    font-size: 3vw;
-    max-width: 95%;
-}
-
-.logement p {
-    color: #FF6060;
-    font-size: 18px
-}
-
 .logement {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.title {
+    width: 80%;
+}
+
+.logement h1 {
+    color: #FF6060;
+    font-size: 36px;
+    max-width: 95%;
+    line-height: normal;
+    margin-bottom: 5px;
+}
+
+.logement p {
+    color: #FF6060;
+    font-size: 18px
 }
 
 /* tags */
@@ -41,6 +49,8 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    width: 20%;
+    align-items: flex-end;
 }
 
 .host-info {
@@ -49,6 +59,7 @@
     align-items: center;
     width: 167px;
     margin-bottom: 10px;
+    justify-content: flex-end;
 }
 
 .host-picture {
@@ -65,6 +76,11 @@
 }
 
 /* stars */
+.rating {
+    justify-content: flex-end;
+    width: 196px;
+}
+
 .star-icon {
     width: 24px;
     height: 24px;
@@ -87,7 +103,58 @@
 
 /* -------------- mobile -----------------*/
 
-@media (max-width: 550px) {
+@media (max-width: 895px) {
+    .logement h1 {
+        font-size: 24px;
+    }
+}
+
+
+@media (max-width: 700px) {
+
+    .logement p {
+        font-size: 14px;
+    }
+
+    .logement span {
+        font-size: 12px;
+        min-width: fit-content;
+    }
+
+    .title {
+        width: 70%;
+    }
+}
+
+
+@media (max-width: 450px) {
+    .title {
+        width: 100%;
+    }
+
+    .logement h1 {
+        font-size: 24px;
+        width: 100%;
+    }
+
+    .user {
+        flex-direction: row-reverse;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .rating {
+        width: fit-content;
+    }
+
+    .star-icon {
+        width: 14px;
+        height: 14px;
+        margin-right: 5px;
+    }
+
     .collaps-logement .collaps-container {
         width: 100%;
     }

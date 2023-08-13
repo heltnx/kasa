@@ -4,7 +4,13 @@ body {
   font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+ul,
+li {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 code {

@@ -1,32 +1,24 @@
 h1 {
-    font-family: 'Montserrat', sans-serif;
-    font-size: 48px;
-    font-weight: 500;
-    line-height: 68px;
-    letter-spacing: 0em;
-    color: white;
-    z-index: 2;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 68px;
+  letter-spacing: 0em;
+  color: white;
+  z-index: 2;
 }
 
 
 /* -------------- mobile -----------------*/
 @media (max-width: 911px) {
-    h1{
-      font-size: 2rem;
-    }
+  h1 {
+    font-size: 2rem;
   }
-  
-  @media (max-width: 611px) {
-    h1{
-      line-height: normal;
-      width: 300px;
-    }
+}
+
+@media (max-width: 611px) {
+  h1 {
+    line-height: normal;
+    width: 300px;
   }
-  @media (max-width: 478px) {
-    h1{
-        font-size: 1.5rem;
-        width: 220px;
-        align-self: flex-start;
-        margin-left: 40px;
-      }
-    }
+}
