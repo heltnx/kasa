@@ -1,8 +1,7 @@
 .logement h1 {
     color: #FF6060;
-    font-size: 2.5vw;
+    font-size: 3vw;
     width: 60%;
-    line-height: 10px;
 }
 
 .collaps-logement {
@@ -20,6 +19,7 @@
 .logement .tags {
     display: flex;
     justify-content: baseline;
+    margin-top: 30px;
 }
 
 .logement span {
@@ -27,7 +27,8 @@
     margin-right: 10px;
     font-size: 14px;
     padding: 5px 0;
-    width: 115px;
+    min-width: 115px;
+    padding: 8px 10px;
     background-color: #FF6060;
     color: white;
     border-radius: 10px;

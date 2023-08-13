@@ -47,8 +47,15 @@ const Logement = () => {
         </div>
 
       </div>
-      <div className='user'>
 
+      <div className='user'>
+        <div className='host-info'>
+          <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
+          <p className="host-name">{logement.host.name}</p>
+        </div>
+        <div className='stars'>
+
+        </div>
       </div>
       <div className='collaps-logement'>
         <Collaps title="Description" description={logement.description} />
