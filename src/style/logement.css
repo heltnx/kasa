@@ -1,3 +1,22 @@
-.logement h2 {
+.logement h1 {
     color: black;
+}
+
+.collaps-logement {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.collaps-logement .collaps-container {
+    width: 40%;
+}
+
+/* -------------- mobile -----------------*/
+
+@media (max-width: 550px) {
+    .collaps-logement .collaps-container {
+        width: 100%;
+    }
 }

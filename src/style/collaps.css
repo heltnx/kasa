@@ -14,7 +14,7 @@
     padding: 10px 20px 10px 15px;
     background: #FF6060;
     margin: 38px auto;
-    border-radius: 5px;
+    border-radius: 10px;
     z-index: 1;
 }
 
@@ -77,6 +77,7 @@
 
 
 /* -------------- mobile -----------------*/
+
 @media (max-width: 680px) {
     .collaps-container {
         width: 100%;

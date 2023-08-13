@@ -2,6 +2,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchLogementData } from '../utils/api.js';
+// components
+import Collaps from '../components/Collaps';
 // css
 import '../style/logement.css';
 
@@ -34,8 +36,21 @@ const Logement = () => {
   return (
     <div>
       <div className='logement'>
-        <h2>{logement.title}</h2>
+        <h1>{logement.title}</h1>
         <p>{logement.location}</p>
+      </div>
+      <div className='collaps-logement'>
+        <Collaps title="Description" description={logement.description} />
+        <Collaps
+          title="Équipements"
+          description={
+            <ul>
+              {logement.equipments.map((equipment, index) => (
+                <li key={index}>{equipment}</li>
+              ))}
+            </ul>
+          }
+        />
       </div>
     </div>
   );
