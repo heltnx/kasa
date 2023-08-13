@@ -1,9 +1,10 @@
 body {
   margin: 0;
-   font-family: 'Montserrat', sans-serif;
-   font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  list-style: none;
 }
 
 code {
@@ -11,14 +12,14 @@ code {
     monospace;
 }
 
-.container{
+.container {
   width: 90%;
   margin: 40px auto;
 }
 
 /* -------------- mobile -----------------*/
 @media (max-width: 1283px) {
-  .container{
+  .container {
     width: 95%;
     margin: 20px auto;
   }

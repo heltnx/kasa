@@ -34,10 +34,21 @@ const Logement = () => {
   }
 
   return (
-    <div>
-      <div className='logement'>
+    <div className='logement'>
+      <div className='title'>
         <h1>{logement.title}</h1>
         <p>{logement.location}</p>
+        <div className='tags'>
+          {logement.tags.map((tag, index) => (
+            <span key={index} className="tag">
+              {tag}
+            </span>
+          ))}
+        </div>
+
+      </div>
+      <div className='user'>
+
       </div>
       <div className='collaps-logement'>
         <Collaps title="Description" description={logement.description} />
