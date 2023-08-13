@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { fetchLogementData } from '../utils/api.js';
 // components
 import Collaps from '../components/Collaps';
+import StarRating from '../components/StarRating';
 // css
 import '../style/logement.css';
 
@@ -35,9 +36,13 @@ const Logement = () => {
 
   return (
     <div className='logement'>
+
+      { /*------ titre et location ------------------------*/}
       <div className='title'>
         <h1>{logement.title}</h1>
         <p>{logement.location}</p>
+
+        { /*------ tags ------------------------*/}
         <div className='tags'>
           {logement.tags.map((tag, index) => (
             <span key={index} className="tag">
@@ -45,18 +50,23 @@ const Logement = () => {
             </span>
           ))}
         </div>
-
       </div>
 
       <div className='user'>
+        { /*------ hosts ------------------------*/}
         <div className='host-info'>
           <img src={logement.host.picture} alt={logement.host.name} className="host-picture" />
           <p className="host-name">{logement.host.name}</p>
         </div>
-        <div className='stars'>
 
+        { /*------ stars ------------------------*/}
+        <div className='rating'>
+          <p className="rating-label">Évaluation :</p>
+          <StarRating rating={logement.rating} />
         </div>
       </div>
+
+      { /*------ collapses ------------------------*/}
       <div className='collaps-logement'>
         <Collaps title="Description" description={logement.description} />
         <Collaps
