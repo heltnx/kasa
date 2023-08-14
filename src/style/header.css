@@ -35,6 +35,10 @@
 
 @media (max-width: 600px) {
 
+  .header {
+    margin-bottom: 20px;
+  }
+
   .header .logo {
     height: 40px;
   }

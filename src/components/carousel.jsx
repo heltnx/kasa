@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import '../style/carousel.css'
+import '../style/carousel.css';
 
 const Carousel = ({ images }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -38,10 +38,12 @@ const Carousel = ({ images }) => {
             <div className="arrow right-arrow" onClick={goToNext}>
                 <img src="/images/arrow-right.png" alt="Suivant" />
             </div>
+
+            <div className="pagination">
+                {currentIndex + 1}/{images.length}
+            </div>
         </div>
     );
 };
 
 export default Carousel;
-
-

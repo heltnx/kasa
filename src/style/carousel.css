@@ -3,6 +3,7 @@
     width: 100%;
     height: 415px;
     overflow: hidden;
+    border-radius: 25px;
 }
 
 .carousel img {
@@ -34,6 +35,7 @@
     cursor: pointer;
 }
 
+/* arrows */
 .left-arrow {
     left: 20px;
 }
@@ -41,6 +43,17 @@
 .right-arrow {
     right: 20px;
 }
+
+/* Pagination */
+.pagination {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 18px;
+}
+
 
 /*  --------------- mobile ------------------  */
 @media (max-width: 700px) {
@@ -53,12 +66,12 @@
         width: 20px;
     }
 
-    .carousel {
-        height: 255px;
-    }
 }
 
 @media (max-width: 400px) {
+    .carousel {
+        height: 255px;
+    }
 
     .left-arrow {
         width: 12px;
@@ -67,4 +80,9 @@
     .right-arrow {
         width: 12px;
     }
+
+    .pagination {
+        font-size: 14px;
+    }
+
 }
