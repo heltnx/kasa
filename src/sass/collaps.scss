@@ -1,0 +1,99 @@
+.collapsContainer {
+    width: 80%;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+
+    .collapsHeader {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 20px 10px 15px;
+        background: #FF6060;
+        margin: 38px auto;
+        border-radius: 10px;
+        z-index: 1;
+
+        h3 {
+            color: white;
+            font-size: 24px;
+            font-weight: 500;
+            letter-spacing: 0em;
+            margin: 0;
+        }
+
+        .arrowIcon {
+            cursor: pointer;
+            transform: rotate(180deg);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        &.open .arrow .arrowIcon{
+            transform: rotate(0deg);
+        }
+    }
+
+    .collapsContent {
+        border-radius: 10px 10px 5px 5px;
+        background: #F6F6F6;
+        margin: 0;
+        padding: 20px;
+        /* Caché par défaut */
+        opacity: 0;
+        transform: scaleY(0);
+        margin-top: -140px;
+        transition: all 0.5s ease-in-out;}
+
+    &.open .collapsContent{
+        transform-origin: top;
+        transform: scaleY(1);
+        opacity: 1;
+        margin-top: -50px;
+        transition: all 0.5s ease-in-out;
+
+        p {
+            transform: scaleY(1);
+            height: min-content;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+        p {
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 26px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #FF6060;
+            transform: scaleY(0);
+            height: 20px;
+        }
+    
+
+    // Media Queries pour mobile
+    @media (max-width: 680px) {
+        width: 100%;
+
+        .collapsHeader h3 {
+            font-size: 18px;
+        }
+
+        .collapsContent p {
+            font-size: 16px;
+            line-height: 20px;
+        }
+    }
+
+    @media (max-width: 550px) {
+        .collapsHeader h3 {
+            font-size: 16px;
+        }
+
+        .collapsContent p {
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}

@@ -1,5 +1,5 @@
-h1 {
-  font-family: 'Montserrat', sans-serif;
+.home h1 {
+  font-family: "Montserrat", sans-serif;
   font-size: 48px;
   font-weight: 500;
   line-height: 68px;
@@ -7,17 +7,13 @@ h1 {
   color: white;
   z-index: 2;
 }
-
-
-/* -------------- mobile -----------------*/
 @media (max-width: 911px) {
-  h1 {
+  .home h1 {
     font-size: 2rem;
   }
 }
-
 @media (max-width: 611px) {
-  h1 {
+  .home h1 {
     line-height: normal;
     width: 300px;
   }

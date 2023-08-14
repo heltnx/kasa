@@ -10,12 +10,12 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-}
 
-.footer-logo {
-    padding: 60px;
-}
+    &-logo {
+        padding: 60px;
+    }
 
-.footer span {
-    margin-bottom: 50px;
+    span {
+        margin-bottom: 50px;
+    }
 }

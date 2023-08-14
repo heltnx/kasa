@@ -6,41 +6,28 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  /* ---------------  Mobile -------------------*/
 }
-
 .header a {
   color: #FF6060;
   text-decoration: none;
   margin-left: 60px;
   font-size: 24px;
 }
-
-/* Style du lien actif */
-.header {
+.header .active {
   padding: 0 5px;
 }
-
-.nav-link.active {
-  text-decoration: underline;
-}
-
 .header .logo {
   height: 60px;
   pointer-events: none;
 }
-
-/* -------------- mobile -----------------*/
-
 @media (max-width: 600px) {
-
   .header {
     margin-bottom: 20px;
   }
-
   .header .logo {
     height: 40px;
   }
-
   .header a {
     font-size: 15px;
     margin-left: 30px;

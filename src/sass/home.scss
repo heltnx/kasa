@@ -1,0 +1,21 @@
+.home {
+  h1{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 68px;
+  letter-spacing: 0em;
+  color: white;
+  z-index: 2;
+
+  // Media Queries pour mobile
+  @media (max-width: 911px) {
+      font-size: 2rem;
+  }
+
+  @media (max-width: 611px) {
+      line-height: normal;
+      width: 300px;
+  }
+}
+}

@@ -7,7 +7,7 @@ import Carousel from '../components/carousel.jsx';
 import Collaps from '../components/Collaps';
 import StarRating from '../components/StarRating';
 // css
-import '../style/logement.css';
+import '../sass/logement.scss';
 
 const Logement = () => {
   const navigate = useNavigate();

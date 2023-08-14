@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../style/landing404.css'
+import '../sass/landing404.scss'
 
 const Landing404 = () => {
     return (

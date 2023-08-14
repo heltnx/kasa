@@ -1,21 +1,21 @@
 // Collaps.js
 import React, { useState } from 'react';
-import '../style/collaps.css';
+import '../sass/collaps.scss';
 
 const Collaps = ({ title, description }) => {
     const [isOpen, setIsOpen] = useState(false);
     const toggleCollapse = () => setIsOpen(!isOpen);
 
     return (
-        <div className={`collaps-container ${isOpen ? 'open' : ''}`}>
-            <div className="collaps-header" >
+        <div className={`collapsContainer ${isOpen ? 'open' : ''}`}>
+            <div className="collapsHeader" >
                 <h3>{title}</h3>
                 <div className={`arrow ${isOpen ? 'open' : ''}`} onClick={toggleCollapse}>
-                    <img src="/images/arrow.svg" alt="Arrow" className="arrow-icon" />
+                    <img src="/images/arrow.svg" alt="Arrow" className="arrowIcon" />
                 </div>
             </div>
 
-            <div className="collaps-content">
+            <div className="collapsContent">
                 <p>{description}</p>
             </div>
         </div>

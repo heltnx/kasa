@@ -1,7 +1,7 @@
 // components/StarRating.js
 import React from 'react';
-import StarIcon from '../components/StarIcon'; // Importez le composant StarIcon
-import '../style/StarRating.css'
+import StarIcon from '../components/StarIcon';
+import '../sass/StarRating.scss'
 
 const StarRating = ({ rating }) => {
     return (

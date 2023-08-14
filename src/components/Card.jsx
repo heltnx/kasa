@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 // fonction import elements
 import { fetchLogementsData } from '../utils/api';
 // css
-import '../style/card.css';
+import '../sass/card.scss';
 
 const Card = () => {
   // State pour stocker les données des logements
@@ -22,11 +22,11 @@ const Card = () => {
   };
 
   return (
-    <div className='item-contain'>
+    <div className='itemContain'>
       {/* boucle map pour créer une carte pour chaque logement */}
       {logements.map((logement) => (
         // Utiliser la propriété "key" pour chaque élément
-        <div key={logement.id} onClick={() => handleLogementClick(logement.id)} className="card-contain">
+        <div key={logement.id} onClick={() => handleLogementClick(logement.id)} className="cardContain">
           <img src={logement.cover} alt={logement.title} />
           <h2>{logement.title}</h2>
         </div>
