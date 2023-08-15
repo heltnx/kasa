@@ -1,38 +1,45 @@
 // Import des hooks React
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 // Import du fichier CSS pour le carrousel
 import '../carousel/carousel.scss';
 
 // Définition du composant Carousel
 const Carousel = ({ images }) => {
+
     // Définition de l'état initial de l'index courant
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    // Ajout d'un écouteur d'événements pour les touches fléchées gauche et droite
+    // Fonction pour mettre à jour l'index en gérant la navigation circulaire (step= nombre de click)
+    const updateIndex = useCallback((currentIndex, step) => {
+        return (currentIndex + step + images.length) % images.length; // + total images (évite valeur negative)
+    }, [images]);
+
+    // écouteur d'événements pour les touches fléchées du clavier gauche et droite
     useEffect(() => {
-        const handleKeyDown = (event) => {
+        const handleKeyDown = (event) => { // gère la touche appuyée
             if (event.key === 'ArrowLeft') {
-                setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+                // met à jour l'index actuel ... enleve 1 de l'index actuel 
+                setCurrentIndex((prevIndex) => updateIndex(prevIndex, -1));
             } else if (event.key === 'ArrowRight') {
-                setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+                setCurrentIndex((prevIndex) => updateIndex(prevIndex, 1));
             }
         };
 
-        window.addEventListener('keydown', handleKeyDown);
+        window.addEventListener('keydown', handleKeyDown); // appel de la fonction (touches clavier)
 
         return () => {
-            window.removeEventListener('keydown', handleKeyDown);
+            window.removeEventListener('keydown', handleKeyDown); // supprim l'ecouteur d'évenement
         };
-    }, [images]);
+    }, [images, updateIndex]); // lorsque la liste "images" change 
 
     // Fonction pour aller à l'image précédente
     const goToPrevious = () => {
-        setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
+        setCurrentIndex((prevIndex) => updateIndex(prevIndex, -1));
     };
 
     // Fonction pour aller à l'image suivante
     const goToNext = () => {
-        setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
+        setCurrentIndex((prevIndex) => updateIndex(prevIndex, 1));
     };
 
     // Rendu du composant Carousel
