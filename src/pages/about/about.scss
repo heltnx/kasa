@@ -1,0 +1,12 @@
+
+  // Media Queries pour mobile
+ 
+@media (max-width: 1100px) {
+    .about .banniere {
+        height: 255px;
+
+        &::before {
+            height: 255px;
+        }
+    }
+}

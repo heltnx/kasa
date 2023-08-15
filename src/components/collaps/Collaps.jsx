@@ -1,6 +1,6 @@
 // Collaps.js
 import React, { useState } from 'react';
-import '../sass/collaps.scss';
+import '../collaps/collaps.scss';
 
 const Collaps = ({ title, description }) => {
     const [isOpen, setIsOpen] = useState(false);

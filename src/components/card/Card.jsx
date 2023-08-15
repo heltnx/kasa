@@ -1,9 +1,9 @@
 // Card.jsx
 import React, { useState, useEffect } from 'react';
 // fonction import elements
-import { fetchLogementsData } from '../utils/api';
+import { fetchLogementsData } from '../../utils/api';
 // css
-import '../sass/card.scss';
+import '../card/card.scss';
 
 const Card = () => {
   // State pour stocker les données des logements

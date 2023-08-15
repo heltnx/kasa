@@ -1,8 +1,8 @@
 import React from 'react';
 // components
-import Nav from '../components/Nav';
+import Nav from '../../components/nav/Nav';
 // css
-import '../sass/header.scss';
+import './header.scss';
 
 
 const Header = () => {

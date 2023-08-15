@@ -1,11 +1,11 @@
 // Home.js
 import React from 'react';
 // components
-import Banniere from '../components/Banniere';
-import Card from '../components/Card';
+import Banniere from '../../components/banniere/Banniere';
+import Card from '../../components/card/Card';
 // css
-import '../sass/home.scss'
-import '../sass/banniere.scss';
+import '../home/home.scss'
+import '../../components/banniere/banniere.scss';
 
 
 const Home = () => {

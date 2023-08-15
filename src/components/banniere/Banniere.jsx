@@ -1,6 +1,6 @@
 // Banniere.js
 import React from 'react';
-import '../sass/banniere.scss';
+import './banniere.scss';
 
 const Banniere = ({ children, backgroundImage }) => { // 2 prop
   const banniereStyle = {

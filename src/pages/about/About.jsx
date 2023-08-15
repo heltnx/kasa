@@ -1,6 +1,8 @@
 import React from 'react';
-import Banniere from '../components/Banniere';
-import Collaps from '../components/Collaps';
+import Banniere from '../../components/banniere/Banniere';
+import Collaps from '../../components/collaps/Collaps';
+// scss
+import '../about/about.scss'
 
 
 const About = () => {
