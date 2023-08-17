@@ -4,7 +4,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import '../carousel/carousel.scss';
 
 // Définition du composant Carousel
-const Carousel = ({ images }) => {
+const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logement" (parent))
 
     // Définition de l'état initial de l'index courant
     const [currentIndex, setCurrentIndex] = useState(0);
@@ -45,17 +45,18 @@ const Carousel = ({ images }) => {
     // Rendu du composant Carousel
     return (
         <div className="carousel">
-            <img src={images[currentIndex]} alt={`Slide ${currentIndex + 1}`} />
+            <img src={images[currentIndex]} alt={`${title} - Slide ${currentIndex + 1}`} />
+            <div className='outilsPagination'>
+                <div className="arrow left-arrow" onClick={goToPrevious}>
+                    <img src="/images/arrow-left.png" alt="{Précédent}" />
+                </div>
+                <div className="arrow right-arrow" onClick={goToNext}>
+                    <img src="/images/arrow-right.png" alt="Suivant" />
+                </div>
 
-            <div className="arrow left-arrow" onClick={goToPrevious}>
-                <img src="/images/arrow-left.png" alt="Précédent" />
-            </div>
-            <div className="arrow right-arrow" onClick={goToNext}>
-                <img src="/images/arrow-right.png" alt="Suivant" />
-            </div>
-
-            <div className="pagination">
-                {currentIndex + 1}/{images.length}
+                <div className="pagination">
+                    {currentIndex + 1}/{images.length}
+                </div>
             </div>
         </div>
     );

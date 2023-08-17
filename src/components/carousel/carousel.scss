@@ -38,6 +38,7 @@
     .left-arrow {
         left: 20px;
         width: 2vw;
+
     }
 
     .right-arrow {
@@ -55,11 +56,17 @@
         font-size: 18px;
     }
 
-/* ---------------  Mobile -------------------*/
-@media (max-width: 600px) {
-        .carousel{
-         height: 255px;
+    // si une seule image est presente
+    .inactive {
+        display: none;
+    }
+
+    /* ---------------  Mobile -------------------*/
+    @media (max-width: 600px) {
+        .carousel {
+            height: 255px;
         }
+
         .pagination {
             font-size: 14px;
         }
@@ -67,9 +74,7 @@
 }
 
 @media (max-width: 600px) {
-    .carousel{
-     height: 255px;
+    .carousel {
+        height: 255px;
     }
 }
-
-

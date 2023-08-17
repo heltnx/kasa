@@ -39,7 +39,7 @@ const Logement = () => {
     <div className='logement'>
 
       { /* ----- Carousel ---------------------- */}
-      <Carousel images={logement.pictures} />
+      <Carousel images={logement.pictures} title={logement.title} />
 
       { /*------ titre et location ---------------*/}
       <div className='title'>
