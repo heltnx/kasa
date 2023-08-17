@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback } from 'react';
 // Import du fichier CSS pour le carrousel
 import '../carousel/carousel.scss';
 
-// Définition du composant Carousel
 const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logement" (parent))
 
     // Définition de l'état initial de l'index courant
