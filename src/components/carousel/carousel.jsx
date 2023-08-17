@@ -42,25 +42,28 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
         setCurrentIndex((prevIndex) => updateIndex(prevIndex, 1));
     };
 
+    // Vérifie s'il y a plus d'une image
+    const showPagination = images.length > 1;
+
     // Rendu du composant Carousel
     return (
         <div className="carousel">
             <img src={images[currentIndex]} alt={`${title} - Slide ${currentIndex + 1}`} />
-            <div className='outilsPagination'>
-                <div className="arrow left-arrow" onClick={goToPrevious}>
-                    <img src="/images/arrow-left.png" alt="{Précédent}" />
+            {showPagination && (
+                <div className='outilsPagination'>
+                    <div className="arrow left-arrow" onClick={goToPrevious}>
+                        <img src="/images/arrow-left.png" alt={`${title} - Précédent`} />
+                    </div>
+                    <div className="arrow right-arrow" onClick={goToNext}>
+                        <img src="/images/arrow-right.png" alt={`${title} - Suivant`} />
+                    </div>
+                    <div className="pagination">
+                        {currentIndex + 1}/{images.length}
+                    </div>
                 </div>
-                <div className="arrow right-arrow" onClick={goToNext}>
-                    <img src="/images/arrow-right.png" alt="Suivant" />
-                </div>
-
-                <div className="pagination">
-                    {currentIndex + 1}/{images.length}
-                </div>
-            </div>
+            )}
         </div>
     );
 };
-
 // Export du composant Carousel
 export default Carousel;
