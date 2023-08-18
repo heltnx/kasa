@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchLogementData } from '../../utils/api.js';
 // components
-import Carousel from '../../components/carousel/carousel.jsx';
+import Carousel from '../../components/carousel/Carousel.jsx';
 import Collaps from '../../components/collaps/Collaps.jsx';
 import StarRating from '../../components/stars/StarRating.jsx';
 // css

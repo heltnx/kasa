@@ -23,13 +23,12 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
                 setCurrentIndex((prevIndex) => updateIndex(prevIndex, 1));
             }
         };
-
         window.addEventListener('keydown', handleKeyDown); // appel de la fonction (touches clavier)
-
         return () => {
             window.removeEventListener('keydown', handleKeyDown); // supprim l'ecouteur d'évenement
         };
     }, [images, updateIndex]); // lorsque la liste "images" change 
+
 
     // Fonction pour aller à l'image précédente
     const goToPrevious = () => {
@@ -41,8 +40,10 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
         setCurrentIndex((prevIndex) => updateIndex(prevIndex, 1));
     };
 
+
     // Vérifie s'il y a plus d'une image
     const showPagination = images.length > 1;
+
 
     // Rendu du composant Carousel
     return (
@@ -64,5 +65,6 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
         </div>
     );
 };
+
 // Export du composant Carousel
 export default Carousel;
