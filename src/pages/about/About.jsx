@@ -4,7 +4,6 @@ import Collaps from '../../components/collaps/Collaps';
 // scss
 import '../about/about.scss'
 
-
 const About = () => {
     const collapsData = [
         {

@@ -1,6 +1,9 @@
 // Collaps.js
 import React, { useState } from 'react';
+//scss
 import '../collaps/collaps.scss';
+// icon
+import arrow from '../../assets/images/arrow.svg'
 
 const Collaps = ({ title, description }) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -11,7 +14,7 @@ const Collaps = ({ title, description }) => {
             <div className="collapsHeader" >
                 <h3>{title}</h3>
                 <div className={`arrow ${isOpen ? 'open' : ''}`} onClick={toggleCollapse}>
-                    <img src="/images/arrow.svg" alt="Arrow" className="arrowIcon" />
+                    <img src={arrow} alt="Arrow" className="arrowIcon" />
                 </div>
             </div>
 

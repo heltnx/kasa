@@ -1,14 +1,15 @@
 import React from 'react';
 // components
 import Nav from '../../components/nav/Nav';
-// css
+import logo from '../../assets/images/logo.png'
+// scss
 import './header.scss';
 
 
 const Header = () => {
   return (
     <header className="header">
-      <img src="../images/logo.png" className="logo" alt="logo" />
+      <img src={logo} className="logo" alt="logo" />
       <Nav />
     </header>
   );

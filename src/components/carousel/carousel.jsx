@@ -1,7 +1,10 @@
 // Import des hooks React
 import React, { useState, useEffect, useCallback } from 'react';
-// Import du fichier CSS pour le carrousel
+// SCSS
 import '../carousel/carousel.scss';
+//images
+import arrowLeft from '../../assets/images/arrow-left.png'
+import arrowRight from '../../assets/images/arrow-right.png'
 
 const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logement" (parent))
 
@@ -52,10 +55,10 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
             {showPagination && (
                 <div className='outilsPagination'>
                     <div className="arrow left-arrow" onClick={goToPrevious}>
-                        <img src="/images/arrow-left.png" alt={`${title} - Précédent`} />
+                        <img src={arrowLeft} alt={`${title} - Précédent`} />
                     </div>
                     <div className="arrow right-arrow" onClick={goToNext}>
-                        <img src="/images/arrow-right.png" alt={`${title} - Suivant`} />
+                        <img src={arrowRight} alt={`${title} - Suivant`} />
                     </div>
                     <div className="pagination">
                         {currentIndex + 1}/{images.length}
