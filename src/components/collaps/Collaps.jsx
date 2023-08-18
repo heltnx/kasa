@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 //scss
 import '../collaps/collaps.scss';
 // icon
-import arrow from '../../assets/images/arrow.svg'
+import arrow from '../../assets/images/arrow.png'
 
 const Collaps = ({ title, description }) => {
     const [isOpen, setIsOpen] = useState(false);
