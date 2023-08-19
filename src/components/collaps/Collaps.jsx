@@ -19,7 +19,11 @@ const Collaps = ({ title, description }) => {
             </div>
 
             <div className="collapsContent">
-                <p>{description}</p>
+                {typeof description === 'string' ? (
+                    <p>{description}</p>
+                ) : (
+                    <div className='text'>{description}</div>
+                )}
             </div>
         </div>
     );

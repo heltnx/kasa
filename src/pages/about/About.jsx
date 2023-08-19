@@ -3,6 +3,7 @@ import Banniere from '../../components/banniere/Banniere';
 import Collaps from '../../components/collaps/Collaps';
 // scss
 import '../about/about.scss'
+import Layout from '../../layout/Layout';
 
 const About = () => {
     const collapsData = [
@@ -25,16 +26,18 @@ const About = () => {
     ];
 
     return (
-        <div className="about">
-            <Banniere backgroundImage='/images/Image%20source%202.jpg' />
-            {collapsData.map((data, index) => (
-                <Collaps
-                    key={index}
-                    title={data.title}
-                    description={data.description}
-                />
-            ))}
-        </div>
+        <Layout>
+            <div className="about">
+                <Banniere backgroundImage='/images/Image%20source%202.jpg' />
+                {collapsData.map((data, index) => (
+                    <Collaps
+                        key={index}
+                        title={data.title}
+                        description={data.description}
+                    />
+                ))}
+            </div>
+        </Layout>
     );
 };
 

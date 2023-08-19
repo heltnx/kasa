@@ -93,9 +93,11 @@
             margin: 0;
         }
     }
+}
 
-    // Media Queries
+// Media Queries
 
+.logement {
     @media (max-width: 895px) {
         h1 {
             font-size: 24px;

@@ -12,7 +12,7 @@ const Nav = () => {
   return (
     <nav>
       <NavLink
-        exact
+        exact="true"
         to="/"
         onClick={() => handleLinkClick('home')}
         className={activeLink === 'home' ? 'nav-link active' : 'nav-link'}
