@@ -8,15 +8,15 @@ import arrowRight from '../../assets/images/arrow-right.png'
 
 const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logement" (parent))
 
-    // Définition de l'état initial de l'index courant
-    const [currentIndex, setCurrentIndex] = useState(0);
+    const [currentIndex, setCurrentIndex] = useState(0); //état initial de l'index courant
 
-    // Fonction pour mettre à jour l'index en gérant la navigation circulaire (step= nombre de click)
+    // mettre à jour l'index en gérant la navigation circulaire (step= nombre de click)
     const updateIndex = useCallback((currentIndex, step) => {
         return (currentIndex + step + images.length) % images.length; // + total images (évite valeur negative)
     }, [images]);
 
-    // écouteur d'événements pour les touches fléchées du clavier gauche et droite
+
+    /* Touches clavier: ------ écouteur d'événements pour les touches fléches gauche et droite*/
     useEffect(() => {
         const handleKeyDown = (event) => { // gère la touche appuyée
             if (event.key === 'ArrowLeft') {
@@ -31,6 +31,7 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
             window.removeEventListener('keydown', handleKeyDown); // supprim l'ecouteur d'évenement
         };
     }, [images, updateIndex]); // lorsque la liste "images" change 
+    // ------------------------------------------------------------------//
 
 
     // Fonction pour aller à l'image précédente
@@ -51,7 +52,16 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
     // Rendu du composant Carousel
     return (
         <div className="carousel">
-            <img src={images[currentIndex]} alt={`${title} - Slide ${currentIndex + 1}`} />
+
+            {images.map((image, index) => (
+                <img
+                    key={index}
+                    src={image}
+                    alt={`${title} - Slide ${index + 1}`}
+                    className={`carousel-image ${index === currentIndex ? 'active' : ''}`}
+                />
+            ))}
+
             {showPagination && (
                 <div className='outilsPagination'>
                     <div className="arrow left-arrow" onClick={goToPrevious}>
@@ -69,5 +79,5 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
     );
 };
 
-// Export du composant Carousel
+
 export default Carousel;

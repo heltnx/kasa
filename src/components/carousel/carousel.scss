@@ -5,23 +5,47 @@
     overflow: hidden;
     border-radius: 25px;
 
+    .image-container {
+        position: relative;
+    }
+
     img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         animation: slideInRight 1s ease-in-out;
     }
-       // annimation au changement d'image
-       @keyframes slideInRight {
+
+    // annimation au changement d'image
+    @keyframes slideInRight {
         from {
             transform: translateX(100%);
-            opacity:0;
+            opacity: 0;
         }
 
         to {
             transform: translateX(0);
             opacity: 100;
         }
+    }
+
+    // autres images
+    .carousel-image {
+        position: absolute;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+    }
+
+    .carousel-image.active {
+        opacity: 1;
+        z-index: 1;
+    }
+
+    //outils pagination
+    .outilsPagination {
+        position: relative;
+        z-index: 2;
+        height: 100%;
     }
 
     // arrows
@@ -34,7 +58,7 @@
 
     .left-arrow {
         left: 20px;
-        width: 2vw;
+        width: 2.5vw;
 
     }
 
@@ -48,7 +72,6 @@
         position: absolute;
         bottom: 15px;
         left: 50%;
-        transform: translateX(-50%);
         color: white;
         font-size: 18px;
     }
@@ -57,6 +80,7 @@
     .inactive {
         display: none;
     }
+
 
     /* ---------------  Mobile -------------------*/
     @media (max-width: 600px) {
@@ -75,4 +99,3 @@
         height: 255px;
     }
 }
- 
