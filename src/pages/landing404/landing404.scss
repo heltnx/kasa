@@ -27,8 +27,12 @@
     // Media Query pour mobile
     @media (max-width: 500px) {
         p {
-            max-width: 200px;
+            max-width: 300px;
             align-self: center;
+            font-size: 18px;
+        }
+        a{
+            font-size: 14px;
         }
     }
 }
