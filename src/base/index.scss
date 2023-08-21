@@ -16,13 +16,17 @@ code {
     monospace;
 }
 
+/* ---------------------------------------*/
+
 .container {
   max-width: 1240px;
   width: 90%;
   margin: 40px auto;
 }
 
+
 /* -------------- mobile -----------------*/
+
 @media (max-width: 1283px) {
   .container {
     width: 95%;
