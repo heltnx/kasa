@@ -72,6 +72,8 @@
     }
 
     .rating {
+        display: flex;
+        align-items: center;
         justify-content: flex-end;
         width: 196px;
 
@@ -95,9 +97,10 @@
     }
 }
 
-// Media Queries
+/* ---- Media Queries -------------*/
 
 .logement {
+
     @media (max-width: 895px) {
         h1 {
             font-size: 24px;
@@ -119,7 +122,7 @@
         }
     }
 
-    @media (max-width: 450px) {
+    @media (max-width: 500px) {
         .title {
             width: 100%;
         }
