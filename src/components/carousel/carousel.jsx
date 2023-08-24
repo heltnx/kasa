@@ -10,10 +10,10 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
 
     const [currentIndex, setCurrentIndex] = useState(0); //état initial de l'index courant
 
-    // mettre à jour l'index en gérant la navigation circulaire (step= nombre de click)
-    const updateIndex = useCallback((currentIndex, step) => {
+    // mise à jour de l'index en gérant la navigation circulaire 
+    const updateIndex = useCallback((currentIndex, step) => { // (step= nombre de click)
         return (currentIndex + step + images.length) % images.length; // + total images (évite valeur negative)
-    }, [images]);
+    }, [images]); //'(callback/image) la fonction ne sera recalculée que si la référence à "images" change,
 
 
     /* Touches clavier: ------ écouteur d'événements pour les touches fléches gauche et droite*/
@@ -62,7 +62,7 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
                 />
             ))}
 
-            {showPagination && (
+            {showPagination && ( // plus d'une image "true"
                 <div className='outilsPagination'>
                     <div className="arrow left-arrow" onClick={goToPrevious}>
                         <img src={arrowLeft} alt={`${title} - Précédent`} />

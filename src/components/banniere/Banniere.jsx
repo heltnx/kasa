@@ -2,7 +2,7 @@
 import React from 'react';
 import './banniere.scss';
 
-const Banniere = ({ children, backgroundImage }) => { // 2 prop
+const Banniere = ({ children, backgroundImage }) => { // 2 props
   const banniereStyle = {
     backgroundImage: `url(${backgroundImage})`,
   };
