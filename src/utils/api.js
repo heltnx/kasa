@@ -7,7 +7,7 @@ export const fetchLogementsData = async () => {
     // Si les données n'ont pas encore été récupérées, effectuer une requête
     if (!logementsData) {
       const response = await fetch('/logements.json');
-      logementsData = await response.json(); // Convertir la réponse en JSON
+      logementsData = await response.json();
     }
     return logementsData; // Renvoyer les données (du cache ou nouvellement récupérées)
   } catch (error) {
@@ -19,7 +19,7 @@ export const fetchLogementsData = async () => {
 // Fonction pour récupérer les données d'un logement spécifique par ID
 export const fetchLogementData = async (id) => {
   try {
-    const logements = await fetchLogementsData(); // Récupérer les données de logements
+    const logements = await fetchLogementsData();
     // Rechercher un logement dans les données par son ID
     return logements.find((logement) => logement.id === id) || null;
   } catch (error) {
