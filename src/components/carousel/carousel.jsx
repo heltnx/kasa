@@ -21,16 +21,17 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
         const handleKeyDown = (event) => { // gère la touche appuyée
             if (event.key === 'ArrowLeft') {
                 // met à jour l'index actuel ... enleve 1 de l'index actuel 
-                setCurrentIndex((prevIndex) => updateIndex(prevIndex, -1));
+                goToPrevious()
             } else if (event.key === 'ArrowRight') {
-                setCurrentIndex((prevIndex) => updateIndex(prevIndex, 1));
+                goToNext()
             }
         };
         window.addEventListener('keydown', handleKeyDown); // appel de la fonction (touches clavier)
         return () => {
             window.removeEventListener('keydown', handleKeyDown); // supprim l'ecouteur d'évenement
         };
-    }, [images, updateIndex]); // lorsque l'image ou l'index change 
+        // eslint-disable-next-line
+    }, []); // Dépendance vide, car cette fonction ne dépend pas des images ou de l'index.
     // ------------------------------------------------------------------//
 
 
