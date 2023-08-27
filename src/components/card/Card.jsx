@@ -11,7 +11,7 @@ const Card = () => {
 
   // useEffect pour exécuter la requête une fois que le composant est monté
   useEffect(() => {
-    // Appeler la fonction de récupéreration des données depuis l'API
+    // Appeler la fonction et mettre à jour les données depuis l'API
     fetchLogementsData().then((data) => setLogements(data));
   }, []);
 
