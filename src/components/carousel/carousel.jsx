@@ -13,10 +13,10 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
     // mise à jour de l'index en gérant la navigation circulaire 
     const updateIndex = useCallback((currentIndex, step) => { // (step= nombre de click)
         return (currentIndex + step + images.length) % images.length; // + total images (évite valeur negative)
-    }, [images]); //'(callback/image) la fonction ne sera recalculée que si la référence à "images" change,
+    }, [images]); //au changement d'image
 
 
-    /* Touches clavier: ------ écouteur d'événements pour les touches fléches gauche et droite*/
+    /* Touches clavier: ---- gestion d'événements pour les touches fléches gauche et droite*/
     useEffect(() => {
         const handleKeyDown = (event) => { // gère la touche appuyée
             if (event.key === 'ArrowLeft') {
@@ -30,7 +30,7 @@ const Carousel = ({ images, title }) => { // (fetchLogementData, depuis "logemen
         return () => {
             window.removeEventListener('keydown', handleKeyDown); // supprim l'ecouteur d'évenement
         };
-    }, [images, updateIndex]); // lorsque la liste "images" change 
+    }, [images, updateIndex]); // lorsque l'image ou l'index change 
     // ------------------------------------------------------------------//
 
 
