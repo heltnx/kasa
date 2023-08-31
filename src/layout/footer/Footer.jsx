@@ -4,10 +4,10 @@ import './footer.scss';
 
 const Footer = () => {
   return (
-    <div className='footer'>
+    <footer className='footer'>
       <img src={logoFooter} alt="Logo" className="footer-logo" />
       <span>© 2020 Kasa. All rights reserved</span>
-    </div>
+    </footer>
   );
 };
 
