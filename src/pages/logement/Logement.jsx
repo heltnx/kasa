@@ -15,7 +15,7 @@ const Logement = () => {
   const { id } = useParams();
   const [logement, setLogement] = useState(null);
 
-  // useEffect pour exécuter la requête une fois que le composant est monté
+  // exécuter la requête une fois que le composant est monté
   useEffect(() => {
     // Appeler la fonction de récupéreration des données depuis l'API
     fetchLogementData(id).then(

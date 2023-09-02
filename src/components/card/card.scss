@@ -1,3 +1,5 @@
+@import "../../base/variable.scss";
+
 .itemContain {
   display: flex;
   flex-direction: row;
@@ -12,7 +14,7 @@
       position: relative;
       width: 25%;
       height: 340px;
-      background-color: #FF6060;
+      background-color:$color-primary;
       border-radius: 10px;
       margin: 20px 10px;
       padding: 20px;
