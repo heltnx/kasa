@@ -1,5 +1,5 @@
 .header {
-  background-color: white;
+  background-color: $text-white;
   min-height: 68px;
   margin-bottom: 40px;
   display: flex;

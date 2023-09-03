@@ -4,14 +4,16 @@
   font-weight: 500;
   line-height: 68px;
   letter-spacing: 0em;
-  color: white;
+  color: $text-white;
   z-index: 2;
 }
+
 @media (max-width: 911px) {
   .home h1 {
     font-size: 2rem;
   }
 }
+
 @media (max-width: 611px) {
   .home h1 {
     line-height: normal;

@@ -1,3 +1,5 @@
+@import "../../base/variable.scss";
+
 .carousel {
     position: relative;
     width: 100%;
@@ -72,7 +74,7 @@
         position: absolute;
         bottom: 15px;
         left: 50%;
-        color: white;
+        color: $text-white;
         font-size: 18px;
     }
 

@@ -4,16 +4,18 @@
   right: 0;
   left: 0;
   background-color: black;
-  color: white;
+  color: $text-white;
   margin-top: 50px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .footer-logo {
   padding: 60px;
 }
+
 .footer span {
   margin-bottom: 50px;
 }

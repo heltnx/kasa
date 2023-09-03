@@ -1,11 +1,12 @@
+@import "../../base/variable.scss";
+
 .home {
   h1{
-  font-family: 'Montserrat', sans-serif;
   font-size: 48px;
   font-weight: 500;
   line-height: 68px;
   letter-spacing: 0em;
-  color: white;
+  color: $text-white;
   z-index: 2;
 
   // Media Queries pour mobile
