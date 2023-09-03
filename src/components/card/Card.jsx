@@ -11,7 +11,7 @@ const Card = () => {
   const [logements, setLogements] = useState([]);
   const navigate = useNavigate();
 
-  // useEffect pour exécuter la requête une fois que le composant est monté
+  // exécuter la requête une fois que le composant est monté
   useEffect(() => {
     // Appeler la fonction et mettre à jour les données depuis l'API
     fetchLogementsData().then((data) => setLogements(data));
