@@ -23,7 +23,7 @@ const Collapse = ({ title, description }) => {
                 {typeof description === 'string' ? (
                     <p>{description}</p>
                 ) : (
-                    <div className='text'>{description}</div>
+                    <div >{description}</div>
                 )}
             </div>
         </div>
