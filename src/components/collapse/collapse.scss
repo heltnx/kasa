@@ -1,3 +1,5 @@
+@import "../../base/variable.scss";
+
 .collapsContainer {
     width: 80%;
     margin: 0 auto;
@@ -11,7 +13,7 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px 10px 15px;
-        background: #FF6060;
+        background: $color-primary;
         margin: 38px auto;
         border-radius: 10px;
         z-index: 1;
@@ -74,7 +76,7 @@
             line-height: 26px;
             letter-spacing: 0em;
             text-align: left;
-            color: #FF6060;
+            color: $color-primary;
             transform: scaleY(0);
             height: 20px;
         }

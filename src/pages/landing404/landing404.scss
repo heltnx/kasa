@@ -1,6 +1,8 @@
+@import "../../base/variable.scss";
+
 .landing404 {
     text-align: center;
-    color: #FF6060;
+    color: $color-primary;
     display: flex;
     flex-direction: column;
     gap: 90px;
@@ -21,7 +23,7 @@
 
     .l404 {
         text-decoration: underline;
-        color: #FF6060;
+        color: $color-primary;
     }
 
     // Media Query pour mobile

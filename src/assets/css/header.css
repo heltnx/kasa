@@ -8,26 +8,32 @@
   justify-content: space-between;
   /* ---------------  Mobile -------------------*/
 }
+
 .header a {
-  color: #FF6060;
+  color: $color-primary;
   text-decoration: none;
   margin-left: 60px;
   font-size: 24px;
 }
+
 .header .active {
   padding: 0 5px;
 }
+
 .header .logo {
   height: 60px;
   pointer-events: none;
 }
+
 @media (max-width: 600px) {
   .header {
     margin-bottom: 20px;
   }
+
   .header .logo {
     height: 40px;
   }
+
   .header a {
     font-size: 15px;
     margin-left: 30px;

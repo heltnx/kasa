@@ -1,3 +1,5 @@
+@import "../../base/variable.scss";
+
 .logement {
     display: flex;
     flex-direction: row;
@@ -11,7 +13,7 @@
     }
 
     h1 {
-        color: #FF6060;
+        color: $color-primary;
         font-size: 36px;
         max-width: 95%;
         line-height: normal;
@@ -19,7 +21,7 @@
     }
 
     p {
-        color: #FF6060;
+        color: $color-primary;
         font-size: 18px;
     }
 
@@ -35,7 +37,7 @@
         padding: 5px 0;
         min-width: 115px;
         padding: 8px 10px;
-        background-color: #FF6060;
+        background-color: $color-primary;
         color: white;
         border-radius: 10px;
         text-align: center;

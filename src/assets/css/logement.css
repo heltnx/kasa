@@ -6,25 +6,30 @@
   align-items: center;
   margin: 0 5px;
 }
+
 .logement .title {
   width: 80%;
 }
+
 .logement h1 {
-  color: #FF6060;
+  color: $color-primary;
   font-size: 36px;
   max-width: 95%;
   line-height: normal;
   margin-bottom: 5px;
 }
+
 .logement p {
-  color: #FF6060;
+  color: $color-primary;
   font-size: 18px;
 }
+
 .logement .tags {
   display: flex;
   justify-content: baseline;
   margin-top: 30px;
 }
+
 .logement span {
   display: block;
   margin-right: 10px;
@@ -32,11 +37,12 @@
   padding: 5px 0;
   min-width: 115px;
   padding: 8px 10px;
-  background-color: #FF6060;
+  background-color: $color-primary;
   color: white;
   border-radius: 10px;
   text-align: center;
 }
+
 .logement .user {
   display: flex;
   flex-direction: column;
@@ -44,6 +50,7 @@
   width: 20%;
   align-items: flex-end;
 }
+
 .logement .user .host-info {
   display: flex;
   flex-direction: row;
@@ -52,62 +59,75 @@
   margin-bottom: 10px;
   justify-content: flex-end;
 }
+
 .logement .user .host-picture {
   border-radius: 50%;
   width: 64px;
   height: 64px;
 }
+
 .logement .user p {
   align-self: end;
   margin-right: 15px;
   font-size: 18px;
   text-align: right;
 }
+
 .logement .rating {
   justify-content: flex-end;
   width: 196px;
 }
+
 .logement .rating .star-icon {
   width: 24px;
   height: 24px;
   margin-right: 10px;
 }
+
 .logement .collaps-logement {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
 .logement .collaps-logement .collapsContainer {
   width: 48%;
   margin: 0;
 }
+
 @media (max-width: 895px) {
   .logement h1 {
     font-size: 24px;
   }
 }
+
 @media (max-width: 700px) {
   .logement p {
     font-size: 14px;
   }
+
   .logement span {
     font-size: 12px;
     min-width: -moz-fit-content;
     min-width: fit-content;
   }
+
   .logement .title {
     width: 70%;
   }
 }
+
 @media (max-width: 450px) {
   .logement .title {
     width: 100%;
   }
+
   .logement h1 {
     font-size: 24px;
     width: 100%;
   }
+
   .logement .user {
     flex-direction: row-reverse;
     width: 100%;
@@ -115,15 +135,18 @@
     justify-content: space-between;
     margin-top: 20px;
   }
+
   .logement .rating {
     width: -moz-fit-content;
     width: fit-content;
   }
+
   .logement .star-icon {
     width: 14px;
     height: 14px;
     margin-right: 5px;
   }
+
   .logement .collaps-logement .collapsContainer {
     width: 100%;
   }

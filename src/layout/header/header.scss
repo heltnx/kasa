@@ -1,3 +1,5 @@
+@import "../../base/variable.scss";
+
 .header {
   background-color: white;
   min-height: 68px;
@@ -8,7 +10,7 @@
   justify-content: space-between;
 
   a {
-      color: #FF6060;
+      color: $color-primary;
       text-decoration: none;
       margin-left: 60px;
       font-size: 24px;
