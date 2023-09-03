@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { fetchLogementData } from '../../utils/api.js';
 // components
 import Carousel from '../../components/carousel/carousel.jsx';
-import Collaps from '../../components/collaps/Collaps.jsx';
+import Collapse from '../../components/collapse/Collapse.jsx';
 import StarRating from '../../components/stars/StarRating.jsx';
 // css
 import '../logement/logement.scss';
@@ -72,9 +72,9 @@ const Logement = () => {
         </div>
 
         { /*------ collapses ------------------------*/}
-        <div className='collaps-logement'>
-          <Collaps title="Description" description={logement.description} />
-          <Collaps
+        <div className='collapsLogement'>
+          <Collapse title="Description" description={logement.description} />
+          <Collapse
             title="Équipements"
             description={
               <ul>

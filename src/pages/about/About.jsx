@@ -1,6 +1,6 @@
 import React from 'react';
 import Banniere from '../../components/banniere/Banniere';
-import Collaps from '../../components/collaps/Collaps';
+import Collapse from '../../components/collapse/Collapse';
 // scss
 import '../about/about.scss'
 import Layout from '../../layout/Layout';
@@ -30,7 +30,7 @@ const About = () => {
             <div className="about">
                 <Banniere backgroundImage='/images/Image%20source%202.jpg' />
                 {collapsData.map((data, index) => (
-                    <Collaps
+                    <Collapse
                         key={index}
                         title={data.title}
                         description={data.description}

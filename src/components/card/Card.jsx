@@ -1,13 +1,15 @@
 // Card.jsx
 import React, { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 // fonction import elements
 import { fetchLogementsData } from '../../utils/api';
 // css
 import '../card/card.scss';
 
 const Card = () => {
-  // State pour stocker les données des logements
+  // état pour stocker les données des logements
   const [logements, setLogements] = useState([]);
+  const navigate = useNavigate();
 
   // useEffect pour exécuter la requête une fois que le composant est monté
   useEffect(() => {
@@ -18,7 +20,7 @@ const Card = () => {
   // Fonction pour gérer le clic sur un logement
   const handleLogementClick = (id) => {
     // Redirection vers la fiche "logement" avec l'id sélectionné
-    window.location.href = `/logement/${id}`;
+    navigate(`/logement/${id}`);
   };
 
   return (
