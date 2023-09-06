@@ -21,7 +21,7 @@ export const fetchLogementData = async (id) => {
   try {
     const logements = await fetchLogementsData();
     // Recherche un logement dans les données par son ID
-    return logements.find((logement) => logement.id === id) || null;
+    return logements.find((logement) => logement.id === id);
   } catch (error) {
     console.error('Error fetching logement data:', error);
     return null; // Renvoyer null en cas d'erreur
